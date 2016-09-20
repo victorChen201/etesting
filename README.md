@@ -5,7 +5,7 @@ sudo apt-get install nodejs-legacy npm
 sudo npm install -g hexo-cli
 ```
 
-## Clone blog source
+## Clone website
 
 ```bash
 git clone https://github.com/jarsonfang/etesting.git
