@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-# Sitemap: http://www.arao.me/sitemap.xml
-# Sitemap: http://www.arao.me/baidusitemap.xml
+Sitemap: http://jarsonfang.github.io/etesting/sitemap.xml
+Sitemap: http://jarsonfang.github.io/etesting/baidusitemap.xml
