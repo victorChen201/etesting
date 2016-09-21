@@ -17,7 +17,13 @@ git clone https://github.com/jarsonfang/etesting.git
 cd etesting && npm install
 ```
 
-## Generate and deploy website
+## Preview on localhost
+
+```bash
+hexo s
+```
+
+## Generate and deploy
 
 ```bash
 hexo d -g

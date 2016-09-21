@@ -116,8 +116,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-  GitHub: https://github.com/open-estuary/
-  Estuary: http://open-estuary.org/
+  GitHub: https://github.com/jarsonfang/etesting/
+  Estuary.org: http://open-estuary.org/
+  Estuary.github: https://github.com/open-estuary/
 
 # Social Links Icons
 # Icon Mapping:
