@@ -4,7 +4,7 @@ tags:
   - git
 categories:
   - VCS
-date: 2014-05-22 16:31:13
+date: 2016-09-22 16:31:13
 ---
 
 原文链接： [Everyday GIT With 20 Commands Or So](https://www.kernel.org/pub/software/scm/git/docs/everyday.html)   翻译： [ 伯乐在线 ](http://blog.jobbole.com) - [cjpan](http://blog.jobbole.com/author/cjpan/)
