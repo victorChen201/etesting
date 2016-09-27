@@ -1,10 +1,10 @@
 ---
 title: sed 函数参数
 tags:
-  - sed & awk
+  - sed
 categories:
   - sed & awk
-date: 2014-02-21 14:33:06
+date: 2016-09-21 14:33:06
 ---
 
 ```bash
