@@ -4,7 +4,7 @@ tags:
   - sed
 categories:
   - sed & awk
-date: 2016-09-21 14:30:15
+date: 2016-09-23 14:30:15
 ---
 
 ## sed 简要介绍

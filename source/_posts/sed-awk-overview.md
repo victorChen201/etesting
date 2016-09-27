@@ -4,7 +4,7 @@ tags:
   - sed
 categories:
   - sed & awk
-date: 2016-09-21 14:23:20
+date: 2016-09-23 14:23:20
 ---
 
 摘自《sed与awk》 Dale Dougberty&amp;Arnold Robbins 著
