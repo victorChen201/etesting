@@ -8,6 +8,7 @@ tags:
   - Centos
   - Opensuse
 categories:
+  - testing
   - Server
 ---
 

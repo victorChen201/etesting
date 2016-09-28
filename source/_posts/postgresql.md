@@ -9,6 +9,7 @@ tags:
   - Opensuse
   - SQL
 categories:
+  - testing
   - Server
 ---
 
