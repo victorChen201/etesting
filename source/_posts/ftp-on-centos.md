@@ -8,11 +8,11 @@ categories:
   - Server
 ---
 
-In this article, we will learn how to configure FTP server on CentOs 7 using ‘vsftpd’. ‘vsftpd’ (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.
+In this article, we will learn how to configure FTP server on CentOs 7 using `vsftpd`. `vsftpd` (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.
 
 ## Install vsftpd
 
-All commands should be run with `root` user. Run the following command in terminal to install vsftpd package:
+All commands should be run with `root` user. Run the following command in terminal to install `vsftpd` package:
 ```bash
 yum install vsftpd ftp -y
 ```
@@ -60,11 +60,11 @@ tcp_wrappers=YES
 
 ## Enable and restart  the vsftpd service
 
-We needed to restart the ‘vsftpd’ services so that the configuration changes has applied.
+We needed to restart the `vsftpd` services so that the configuration changes has applied.
 ```bash
 systemctl restart vsftpd
 ```
-We will set the ‘vsftpd’ service to start at boot time, below is the command to enable the ‘vsftpd’ to start.
+We will set the `vsftpd` service to start at boot time, below is the command to enable the `vsftpd` to start.
 ```bash
 systemctl enable vsftpd
 ```
@@ -83,7 +83,7 @@ firewall-cmd --reload
 
 ## Create FTP users
 
-By default, root user is not allowed to login to ftp server for security purpose. So, let us create a normal testing user called “ftpuser” with password “centos”.
+By default, root user is not allowed to login to ftp server for security purpose. So, let us create a normal testing user called “`ftpuser`” with password “centos”.
 ```bash
 useradd ftpuser
 passwd ftpuser
