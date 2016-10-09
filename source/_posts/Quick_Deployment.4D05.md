@@ -1,20 +1,9 @@
----
-title: Quick_Deployment.4D05
-date: 2016-09-29 15:52:01
-tags:
-  - D05
-categories:
-  - D05
-  - Deployment
----
-
 * [Introduction](#1)
 * [Quick Deploy System](#2)
    * [Deploy system via USB Disk](#2.1)
    * [Deploy system via DVD/BMC](#2.2)
    * [Deploy system via PXE](#2.3)
 
-<!--more-->
 
 <h2 id="1">Introduction</h2>
 

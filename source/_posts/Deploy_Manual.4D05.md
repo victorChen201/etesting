@@ -1,13 +1,3 @@
----
-title: Deploy_Manual.4D05
-date: 2016-09-29 15:52:01
-tags:
-  - D05
-categories:
-  - D05
-  - Deployment
----
-
 * [Introduction](#1)
 * [Preparation](#2)
    * [Prerequisite](#2.1)
@@ -17,8 +7,6 @@ categories:
    * [Boot via PXE(ACPI)](#3.1)
    * [Boot via NFS(ACPI)](#3.2)
    * [Boot via DISK(SAS/USB/SATA)(ACPI)](#3.3)
-
-<!--more-->
 
 <h2 id="1">Introduction</h2>
 
