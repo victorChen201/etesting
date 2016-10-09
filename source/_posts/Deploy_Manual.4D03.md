@@ -63,6 +63,7 @@ Because this dtb file is important to this D03 boards, firstly you must flash th
    ifconfig -s eth0 static <IP address> <mask> <gateway>
    ```
    e.g. `ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1`
+
 2. Download dtb file from FTP at "Embedded Boot Loader(EBL)" mode  
    Enter "exit" from "EFI internal shell" to the UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.
    ```bash
@@ -78,6 +79,7 @@ Because this dtb file is important to this D03 boards, firstly you must flash th
    sfcerase 0x7C0000 0x10000
    sfcwrite 0x100000 0x7C0000 0x10000
    ```
+
 3. Reboot your D03 board  
    You must reboot your D03 board after above two steps, this new DTB file will be used on booting board.  
    Note: It is necessary to flash the DTB file to SPI flash to solve a known MAC address duplicate Issue. Also it is to be noted that the DTB file should not be input in the Grub config file. So if you wish to use a modified DTB file, then you should always have it flashed to SPI flash before bootup.
@@ -101,12 +103,14 @@ follow commands in EBL:
    provision <server IP> -u <ftp user name> -p <ftp password> -f <Image binary file> -a <download target address>
    ```
     e.g. `provision 192.168.1.107 -u sch -p aaa -f Image -a 0x80000`
+
 2. Download dtb file from FTP server to target board's RAM
    ```bash
    # Download dtb file from FTP server to target board's RAM
    provision <server IP> -u <ftp user name> -p <ftp password> -f <dtb file> -a <download target address>
    ```
    e.g. `provision 192.168.1.107 -u sch -p aaa -f hip06-d03.dtb -a 0x06000000`
+
 3. Download rootfs file from FTP server
    ```bash
    # Download rootfs file from FTP server to target board's RAM
@@ -116,6 +120,7 @@ follow commands in EBL:
    ```bash
    provision 192.168.1.107 -u sch -p aaa -f mini-rootfs-arm64.cpio.gz -a 0x07000000
    ```
+
 4. Start operating system  
   Type "exit" to exit EBL. Select "Boot Manager"->"ESL Start OS" menu to start operating system.
 
@@ -265,6 +270,7 @@ D03 also supports booting via ACPI, you can bring up this system which is simila
      #devicetree /<user>/hip06-d03.dtb
    }
    ```
+
 2. Set the parameters of booting via ACPI  
    you must add `acpi=force` property in `linux` line for "grub.cfg" file. If not, system will booted up with DTS by default. e.g.:
    ```bash
