@@ -1,18 +1,9 @@
----
-title: Grub_Manual.4All
-date: 2016-09-29 15:52:01
-tags:
-  - D05
-categories:
-  - D05
-  - Deployment
----
+
 * [Introduction](#1)
 * [Grub config file](#2)
 * [files structure bootable partition](#3)
 * [FAQ](#4)
 
-<!--more-->
 <h2 id="1">Introduction</h2>
 
 Grub is a kind of boot loader to load kernel into RAM and run it.
