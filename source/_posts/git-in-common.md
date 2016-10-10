@@ -1,10 +1,11 @@
 ---
 title: git常用命令
+date: 2016-09-22 11:00:27
 tags:
   - git
 categories:
+  - Tools
   - VCS
-date: 2016-09-22 11:00:27
 ---
 
 原文：<http://www.cnblogs.com/1-2-3/archive/2010/07/18/git-commands.html>

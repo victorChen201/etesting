@@ -1,11 +1,12 @@
 ---
 title: sed & awk 概述
+date: 2016-09-23 14:23:20
 tags:
   - sed
   - awk
 categories:
+  - Tools
   - sed & awk
-date: 2016-09-23 14:23:20
 ---
 
 摘自《sed与awk》 Dale Dougberty&amp;Arnold Robbins 著

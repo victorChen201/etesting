@@ -1,10 +1,11 @@
 ---
 title: sed 学习手册
+date: 2016-09-23 14:30:15
 tags:
   - sed
 categories:
+  - Tools
   - sed & awk
-date: 2016-09-23 14:30:15
 ---
 
 ## sed 简要介绍
