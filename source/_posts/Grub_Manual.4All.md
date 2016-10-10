@@ -2,9 +2,10 @@
 title: Grub_Manual.4ALL
 date: 2016-10-10 10:11:01
 tags:
+  - D03
   - D05
 categories:
-  - D05
+  - Documents
 ---
 
 * [Introduction](#1)
