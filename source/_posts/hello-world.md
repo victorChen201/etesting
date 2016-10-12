@@ -35,6 +35,12 @@ $ hexo generate
 
 More info: [Generating](https://hexo.io/docs/generating.html)
 
+### Clean old cache
+
+```bash
+$ hexo clean
+```
+
 ### Deploy to remote sites
 
 ``` bash
