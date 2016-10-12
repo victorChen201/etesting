@@ -26,5 +26,6 @@ hexo s
 ## Generate and deploy
 
 ```bash
+hexo clean
 hexo d -g
 ```
