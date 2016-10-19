@@ -12,7 +12,7 @@ categories:
 * [Introduction](#1)
 * [Quick Deploy System](#2)
    * [Deploy system via USB Disk](#2.1)
-   * [Deploy system via DVD](#2.2)
+   * [Deploy system via DVD/BMC](#2.2)
    * [Deploy system via PXE](#2.3)
 <!--more-->
 
@@ -38,19 +38,26 @@ Note: In my case, the working directory is `~/workdir`.
 5. According to the prompt to deploy the system.
 6. Start the boards from "grub" menu of UEFI by default.
 
-### <a name="2.2">Deploy system via DVD</a>
+### <a name="2.2">Deploy system via DVD/BMC</a>
 
 1. Prepare ISO image and install disk.
-    * Modify `estuary/estuarycfg.json`. Make sure the platform, distros are all right.
-    * Change the value of "install" to "yes" in object "setup" for iso and the value "name" to your target iso image file name.
-    * Use `build.sh` to create the target install iso image file.  
-      eg: `./estuary/build.sh -f estuary/estuarycfg.json`
-    * Burn the iso image file to DVD disk if you use the physical DVD driver.
-2. Connect the physical DVD driver to the board, plug in the install DVD disk.
-3. Reboot the board.
-4. Boot from the DVD device. (About how to boot from DVD device, please refer to the UEFI related manual.)
-5. According to the prompt to deploy the system.
-6. Start the boards from "grub" menu of UEFI by default.
+   * Modify `estuary/estuarycfg.json`. Make sure the platform, distros are all right.
+   * Change the value of "install" to "yes" in object "setup" for iso and the value "name" to your target iso image file name.
+   * Use `build.sh` to create the target install iso image file.
+     eg: `./estuary/build.sh -f estuary/estuarycfg.json`
+2. Via DVD
+   * Burn the iso image file to DVD disk if you use the physical DVD driver.
+   * Connect the physical DVD driver to the board, plug in the install DVD disk.
+   * Reboot the board.
+   * Boot from the DVD device. (About how to boot from DVD device, please refer to the UEFI related manual.)
+   * According to the prompt to deploy the system.
+   * Start the boards from "grub" menu of UEFI by default.
+3. Via BMC
+   * Login BMC website of specified IP with browser(IE browser is suggested to use), The `username` & `password` is `root` & `Huawei12#$`.
+   * Click "Remote" on the top of BMC webiste. Select "Remote Virtual Console (Private Mode)" to enter into KVM interface. Click "Image File" and choose the iso image, then click "Connect" button.
+   * Click "Config" on the top of BMC website, click "Boot Option" to select "DVD-ROM drive", then click "Save" button.
+   * Reboot the board
+   * According to the prompt to deploy the system.
 
 ### <a name="2.3">Deploy system via PXE</a>
 

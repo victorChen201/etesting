@@ -68,7 +68,7 @@ You can switch between two modes by typing "exit" from one mode to UEFI main men
 
 ### Update UEFI files
 
-a. IP address config at "EFI Internal Shell" mode(Optional, you can ignore this step if DHCP works well)
+*  IP address config at "EFI Internal Shell" mode(Optional, you can ignore this step if DHCP works well)
 
    Press any key except "enter" key to enter UEFI main menu. Select "Boot Manager"->"EFI Internal Shell".
    ```bash
@@ -78,7 +78,7 @@ a. IP address config at "EFI Internal Shell" mode(Optional, you can ignore this 
    ```
    ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1
    ```
-b. Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
+*  Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
 
    Enter "exit" from "EFI Internal Shell" mode to the UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.
    ```bash
@@ -92,17 +92,19 @@ b. Burn BIOS file at "Embedded Boot Loader(EBL)" mode
    provision 192.168.1.107 -u sch -p aaa -f UEFI_D03.fd -a 0x100000
    spiwfmem 0x100000 0x0000000 0x300000
    ```
-c. Power off and reboot board again.
+*  Power off and reboot board again.
 
 ## <a name="3">Recover the UEFI when it broke</a>
 
-Actually the board can restore two UEFI in case of the default one breaks, then you can restore it as following way:
+1. Connect board's BMC port to the network port of your ubuntu host.
+2. Configure board's BMC IP and your ubuntu host's IP at the same network segment.
+3. Login the BMC website, The `username/passwd` is `root/Huawei12#$`. Click "system", click "Firmware upgrade", click "Browse" to choose the hpm formate uefi file(Please contact support@open-estuary.org to get the hpm formate uefi file).
 
-1. Power off the board and disconnect power supply.
-2. Push the dial switch '`s3`' to '`off`' with a '`3`' on the board, please check the Hardware Boards to find where it is: <http://open-estuary.com/d03-2/>.
-3. Power on and enter UEFI SHELL again as above description.
-4. Push the dial swift '`s3`' to '`on`' with a '`3`' on the board.
-5. Burn UEFI file for BIOS as above step3 "Update UEFI files".
-6. Reset the system again.
+   Note: Usually BMC website can be visited by (https://192.168.2.100) by default. If BMC IP have modified by somebody, please take the following steps to find modified BMC IP
 
-Now you have already updated your failed BIOS, and the board will boot with new UEFI successfully.
+   * Pull out the power cable. Find the pin named "`COM_SW`" at `J44`. Then connect it.
+   * Power on the board, connect the board's serial port to your ubuntu serial port. When the screen display message "You are trying to access a restricted zone. Only Authorized Users allowed.", type "Enter" key, input `username/passwd`, the `username/passwd` are `root/Huawei12#$`.
+   * After you login the BMC interface which start with "`iBMC:/->`", use command "`ifconfig`" to see the modified BMC IP.
+   * When you get the board's BMC IP, please visit the BMC website by `https://<board's BMC IP>`
+4. Click "Start update"(Do not power off during this period).
+5. After updated UFEI file, reboot the board to enter UEFI menu.
