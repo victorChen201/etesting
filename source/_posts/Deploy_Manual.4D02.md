@@ -126,7 +126,7 @@ There are several methods to bring up system, you can select following anyone fi
  In this boot mode, kernel image, dtb file and rootfs file will be writen into NORFLASH. Before the kernel start, the kernel image, dtb fille and rootfs file will be loaded into RAM from NORFLASH.  
  Boot D02 to UEFI main menu. Select "Boot Manager"->"Eembedded Boot Loader(EBL)" and type the follow commands in EBL:
 
-1. Download Image binary file from FTP
+1. Download Image binary file from FTP  
    ```bash
    # Download file from FTP server to target board's RAM
    provision <server IP> -u <ftp user name> -p <ftp password> -f <kernel image file> -a <download target address>
@@ -138,7 +138,7 @@ There are several methods to bring up system, you can select following anyone fi
    provision 192.168.1.107 -u sch -p aaa -f Image -a 0x100000
    norwfmem 0x100000 0x100000 0x1f00000
    ```
-2. Download rootfs file from FTP
+2. Download rootfs file from FTP  
    ```bash
    # Download file from FTP server to target board's RAM
    provision <server IP> -u <ftp user name> -p <ftp password> -f <rootfs image> -a <download target address>
@@ -150,9 +150,9 @@ There are several methods to bring up system, you can select following anyone fi
    provision 192.168.1.107 -u sch -p aaa -f mini-rootfs-arm64.cpio.gz -a 0x100000
    norwfmem 0x100000 0x2000000 0x4000000
    ```
-3. Reboot D02 and press anykey except "enter" to enter UEFI Boot Menu
+3. Reboot D02 and press anykey except "enter" to enter UEFI Boot Menu  
 
-4. Select "Boot Manager"->"FLASH Start OS" boot option and press "Enter"
+4. Select "Boot Manager"->"FLASH Start OS" boot option and press "Enter"  
 
 To get all binaries mentioned above, please refer to [Readme.md](https://github.com/open-estuary/estuary/blob/master/doc/Readme.4D02.md).
 
@@ -172,9 +172,9 @@ To config the grub.cfg to support PXE boot, please refer to [Grub_Manual.md](htt
 
 In this boot mode, the root parameter in grub.cfg menuentry will set to /dev/nfs and nfsroot will be set to the path of rootfs on NFS server. You can use `"showmount -e <server ip address>"` to list the exported NFS directories on the NFS server. You can use "showmount -e <server ip address>" to list the exported NFS directories on the NFS server.  
 D02 supports booting via NFS, you can try it as following steps:  
-1. Enable DHCP, TFTP and NFS service according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).
-2. Get and config grub file to support NFS boot according to [Grub_Manual.md](https://github.com/open-estuary/estuary/blob/master/doc/Grub_Manual.4All.md).
-3. Reboot D02 and press anykey except "enter" to enter UEFI main Menu
+1. Enable DHCP, TFTP and NFS service according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).  
+2. Get and config grub file to support NFS boot according to [Grub_Manual.md](https://github.com/open-estuary/estuary/blob/master/doc/Grub_Manual.4All.md).  
+3. Reboot D02 and press anykey except "enter" to enter UEFI main Menu  
 4. Select  "Boot Manager"->"EFI Network" to and press enter key.
 
 ### <a name="3.5">Boot via DISK(SAS/USB/SATA)</a>
