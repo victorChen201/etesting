@@ -177,6 +177,7 @@ You can place this ubuntu systerm into eMMC on HiKey according to this following
    $ cd /
    $ mount /tmp
    ```
+
 6. Reboot HiKey board  
 7. Select "grub on eMMC" from uefi options.  
 8. Select "Hikey Ubuntu eMMC" from grub options  
