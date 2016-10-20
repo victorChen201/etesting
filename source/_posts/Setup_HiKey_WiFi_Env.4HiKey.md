@@ -121,11 +121,12 @@ Supposed the login user is peter.
    3: wlan0: (BROADCAST,MULTICAST) mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
    link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff`
    ```
-   Look for the word "UP" inside the brackets in the first line of the output.  
+   Look for the word "UP" inside the brackets in the first line of the output.
+
    * Enable the wireless device  
    In the above example, wlan0 is not UP. Execute the following command to bring it up:  
    `$ sudo ip link set wlan0 up`  
-   `[sudo] password for peter`:
+   `[sudo] password for peter`:  
    Note: you need root privilege for the above operation.
 
    If you run the show link command again, you can tell that wlan0 is now UP.  
@@ -135,6 +136,7 @@ Supposed the login user is peter.
     qlen 1000<br>
     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
    ```
+
    * Check the connection status.  
    `$ iw wlan0 link`  
    you can found the connect is ok now.  
