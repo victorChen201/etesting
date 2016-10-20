@@ -360,6 +360,7 @@ D02 also supports booting via ACPI, you can bring up this system which is simila
    # devicetree /<user>/hip05-d02.dtb
    }
    ```
+
 * Set the parameters of booting via ACPI  
    you must add `"acpi=force"` property in `"linux"` line for "grub.cfg" file. If not, system will booted up with DTS by default.  
    e.g.:  

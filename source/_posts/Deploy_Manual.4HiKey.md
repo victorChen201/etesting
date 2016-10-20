@@ -163,6 +163,7 @@ NOTE: WIFI config about mini-rootfs systerm please refer to [Setup_HiKey_Wifi_En
 
 If you purchase HiKey board which eMMC is 8G, We recommend you to use eMMC HiKey placing this ubuntu systerm. Estuary provides ptable image which will suport 8G eMMC HiKey board.In return you purchase HiKey board which eMMC is 4G, We recommend you to use SD card placing this ubuntu syterm because Estuary release distribution volume is 4G~5G or so. However, you also may use HiKey board which eMMC is 4G to place this clipping ubuntu systerm.  
 You can place this ubuntu systerm into eMMC on HiKey according to this following instruction:  
+
 1. Turn on HiKey board  
 2. Select "grub on eMMC" from uefi options  
 3. Select "Hikey minilinux eMMC" from grub options (boot min rootfs)  
@@ -180,6 +181,7 @@ You can place this ubuntu systerm into eMMC on HiKey according to this following
 7. Select "grub on eMMC" from uefi options.  
 8. Select "Hikey Ubuntu eMMC" from grub options  
 9. Success to boot ubunt systerm  
+
 NOTE: WIFI config about ubuntu systerm please refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document
 
 ### <a name="4">Appendix 1: Partition Information</a>
