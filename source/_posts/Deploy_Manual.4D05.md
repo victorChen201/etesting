@@ -87,10 +87,11 @@ To config the grub.cfg to support PXE boot, please refer to  [Grub_Manual.md](ht
 In this boot mode, the root parameter in `grub.cfg` menuentry will set to `/dev/nfs` and `nfsroot` will be set to the path of rootfs on NFS server. You can use `showmount -e <server ip address>` to list the exported NFS directories on the NFS server.
 
 D05 supports booting via NFS, you can try it as following steps:
-1. Enable DHCP, TFTP and NFS service according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).
+
+1. Enable DHCP, TFTP and NFS service according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).  
 2. Get and config grub file to support NFS boot according to [Grub_Manual.md](https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md).  
-   **Note**: D05 only supports booting via ACPI mode with Centos distribution, so please refer to [Grub_Manual.md](https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md) to get correct configuration.
-3. Reboot D05 and press anykey except "enter" to enter UEFI Boot Menu
+   **Note**: D05 only supports booting via ACPI mode with Centos distribution, so please refer to [Grub_Manual.md](https://github.com/open-estuary/estuary/tree/estuary-d05-3.0b/doc/Grub_Manual.4All.md) to get correct configuration.  
+3. Reboot D05 and press anykey except "enter" to enter UEFI Boot Menu  
 4. Select boot option "Boot Manager"->"EFI Network `<No>`" boot option to enter.  
   **Note**: If you are connecting the D05 board of openlab, please select "EFI Network 2". The value of `<No>` is depended on which D05 GE port is connected.
 

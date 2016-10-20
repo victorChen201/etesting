@@ -50,12 +50,14 @@ NOTE: please refer to the Hardware User Guide for more information on board link
    $ sudo apt-get update
    $ sudo apt-get install android-tools-fastboot
    ```
+
 4. Install Python, you can do it as follows:  
    ```bash
    $ sudo apt-get update
    $ sudo apt-get install python2.7 python2.7-dev
    $ alias python=python2.7
-	```
+   ```
+
 ### <a name="2.3">Image File</a>
 ```bash
 $ mkdir hikey-image
