@@ -124,31 +124,31 @@ Supposed the login user is peter.
    Look for the word "UP" inside the brackets in the first line of the output.
 
    * Enable the wireless device  
-   In the above example, wlan0 is not UP. Execute the following command to bring it up:  
-   `$ sudo ip link set wlan0 up`  
-   `[sudo] password for peter`:  
-   Note: you need root privilege for the above operation.
+     In the above example, wlan0 is not UP. Execute the following command to bring it up:  
+     `$ sudo ip link set wlan0 up`  
+     `[sudo] password for peter`:  
+     Note: you need root privilege for the above operation.
 
-   If you run the show link command again, you can tell that wlan0 is now UP.  
-   `$ ip link show wlan0`  
-   ```bash
-    wlan0: (NO-CARRIER,BROADCAST,MULTICAST,UP) mtu 1500 qdisc mq state DOWN mode DEFAULT<br>
-    qlen 1000<br>
-    link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
-   ```
+     If you run the show link command again, you can tell that wlan0 is now UP.  
+     `$ ip link show wlan0`  
+     ```bash
+     wlan0: (NO-CARRIER,BROADCAST,MULTICAST,UP) mtu 1500 qdisc mq state DOWN mode DEFAULT
+     qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
+     ```
 
    * Check the connection status.  
-   `$ iw wlan0 link`  
-   you can found the connect is ok now.  
-   `$ ip addr show wlan0`  
-   ```bash
-    wlan0:  mtu 1500 qdisc mq state UP qlen 1000
-    link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
-    inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
-    valid_lft forever preferred_lft forever
-   ```
-    NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
+     `$ iw wlan0 link`  
+      you can found the connect is ok now.  
+      `$ ip addr show wlan0`  
+      ```bash
+      wlan0:  mtu 1500 qdisc mq state UP qlen 1000
+      link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
+      inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
+      inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
+      valid_lft forever preferred_lft forever
+      ```
+NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
 
 ## <a name="3">Fedora && CentOS wifi configure</a>
 

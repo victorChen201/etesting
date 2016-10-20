@@ -78,29 +78,33 @@ Refer to https://help.ubuntu.com/community/isc-dhcp-server . For a simplified di
   `tftp    dgram   udp wait    root    /usr/sbin/in.tftpd  /usr/sbin/in.tftpd -s /var/lib/tftpboot`  
 * Enable boot service for inetd  
   `sudo update-inetd --enable BOOT`  
-* Configure the TFTP server, update /etc/default/tftpd-hpa like follows:  
+* Configure the TFTP server, update /etc/default/tftpd-hpa like follows:
+
   ```bash
-    TFTP_USERNAME="tftp"
-    TFTP_ADDRESS="0.0.0.0:69"
-    TFTP_DIRECTORY="/var/lib/tftpboot"
-    TFTP_OPTIONS="-l -c -s"
+  TFTP_USERNAME="tftp"
+  TFTP_ADDRESS="0.0.0.0:69"
+  TFTP_DIRECTORY="/var/lib/tftpboot"
+  TFTP_OPTIONS="-l -c -s"
   ```
+
 * Set up TFTP server directory
   ```bash
-    sudo mkdir /var/lib/tftpboot
-    sudo chmod -R 777 /var/lib/tftpboot/
+  sudo mkdir /var/lib/tftpboot
+  sudo chmod -R 777 /var/lib/tftpboot/
   ```
-* Restart inet & TFTP server  
+
+* Restart inet & TFTP server
   ```bash
-    sudo service openbsd-inetd restart
-    sudo service tftpd-hpa restart
-   ```
-    Check status with `netstat -lu`  
-    Expected output:
-    ```
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State
-    udp        0      0 *:tftp                  *:*
-    ```
+  sudo service openbsd-inetd restart
+  sudo service tftpd-hpa restart
+  ```
+  Check status with `netstat -lu`  
+  Expected output:
+  ```
+  Proto Recv-Q Send-Q Local Address           Foreign Address         State
+  udp        0      0 *:tftp                  *:*
+  ```
+
 ### <a name="4">Put files in the TFTP root path</a>
 
 Put the corresponding files into TFTP root directory, they are: grub binary file, grub configure file, kernel Image and dtb file.  
