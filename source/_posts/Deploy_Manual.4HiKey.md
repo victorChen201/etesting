@@ -176,10 +176,10 @@ You can place this ubuntu systerm into eMMC on HiKey according to this following
    $ cd /
    $ mount /tmp
    ```
- 6. Reboot HiKey board  
- 7. Select "grub on eMMC" from uefi options.  
- 8. Select "Hikey Ubuntu eMMC" from grub options  
- 9. Success to boot ubunt systerm  
+6. Reboot HiKey board  
+7. Select "grub on eMMC" from uefi options.  
+8. Select "Hikey Ubuntu eMMC" from grub options  
+9. Success to boot ubunt systerm  
 NOTE: WIFI config about ubuntu systerm please refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document
 
 ### <a name="4">Appendix 1: Partition Information</a>

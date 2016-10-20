@@ -68,7 +68,8 @@ When system showing "Press Any key in 10 seconds to stop automatical booting..."
    Press any key except "enter" key to enter into UEFI main menu. Select "Boot Manager"->EFI Internal Shell.
 
    `ifconfig -s eth0 static <IP address> <mask> <gateway>`  
-   e.g.: `ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1`  
+   e.g.: `ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1`
+
 * Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
   Enter "exit" from "EFI Internet Shell" mode to UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.  
   ```bash

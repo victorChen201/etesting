@@ -123,8 +123,8 @@ There are several methods to bring up system, you can select following anyone fi
 
 ### <a name="3.2">Boot via NORFLASH</a>
 
- In this boot mode, kernel image, dtb file and rootfs file will be writen into NORFLASH. Before the kernel start, the kernel image, dtb fille and rootfs file will be loaded into RAM from NORFLASH.  
- Boot D02 to UEFI main menu. Select "Boot Manager"->"Eembedded Boot Loader(EBL)" and type the follow commands in EBL:
+In this boot mode, kernel image, dtb file and rootfs file will be writen into NORFLASH. Before the kernel start, the kernel image, dtb fille and rootfs file will be loaded into RAM from NORFLASH.  
+Boot D02 to UEFI main menu. Select "Boot Manager"->"Eembedded Boot Loader(EBL)" and type the follow commands in EBL:
 
 1. Download Image binary file from FTP  
    ```bash
@@ -161,7 +161,7 @@ To get all binaries mentioned above, please refer to [Readme.md](https://github.
 In this boot mode, the UEFI will get grub from PXE server.  
 The grub will get the configuration file from TFTP service configured by PXE server.  
 1. Setup PXE environment on host  
-   Enable both DHCP and TFTP services on one of your host machines according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).
+   Enable both DHCP and TFTP services on one of your host machines according to [Setup_PXE_Env_on_Host.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_PXE_Env_on_Host.4All.md).  
 2. Reboot and press anykey except "enter" to enter UEFI main Menu  
 3. Select "Boot Manager"->"EFI Network" and press "Enter".  
 4. After several seconds, D02 will boot by PXE automatically.
