@@ -29,11 +29,11 @@ Where to get them, please refer to [Readme.md](https://github.com/open-estuary/e
 Note: This is not necessary unless you want to upgrade UEFI really.
 
 1. Prepare files about UEFI on local computer  
-   FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.  
-   All files mentioned above should be ready firstly, then put them in the root directory of FTP.
+FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.  
+All files mentioned above should be ready firstly, then put them in the root directory of FTP.
 
 2. Connect the board's UART port to a host machine  
-   Please refer to [Deploy_Manual.4D02.md](https://github.com/open-estuary/estuary/blob/master/doc/Deploy_Manual.4D02.md) "Prerequisite" chapter.
+Please refer to [Deploy_Manual.4D02.md](https://github.com/open-estuary/estuary/blob/master/doc/Deploy_Manual.4D02.md) "Prerequisite" chapter.
 
 If you choose Method 1, use another console window, use `board_reboot` command to reset the board.  
 If you choose Method 2, press the reset key on the board to reset the board.

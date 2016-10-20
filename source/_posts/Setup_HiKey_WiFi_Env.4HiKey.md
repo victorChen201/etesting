@@ -115,13 +115,13 @@ Supposed the login user is peter.
    At first, please reboot the system.  
    After the system is ready, you can check whether the wifi is ready:
 
-   * Check whether the wireless device is up.
-   `$ ip link show wlan0`  
-   ```bash
-   3: wlan0: (BROADCAST,MULTICAST) mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
-   link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff`
-   ```
-   Look for the word "UP" inside the brackets in the first line of the output.
+   * Check whether the wireless device is up.  
+     `$ ip link show wlan0`  
+     ```bash
+     3: wlan0: (BROADCAST,MULTICAST) mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff`
+     ```
+     Look for the word "UP" inside the brackets in the first line of the output.
 
    * Enable the wireless device  
      In the above example, wlan0 is not UP. Execute the following command to bring it up:  
@@ -139,16 +139,16 @@ Supposed the login user is peter.
 
    * Check the connection status.  
      `$ iw wlan0 link`  
-      you can found the connect is ok now.  
-      `$ ip addr show wlan0`  
-      ```bash
-      wlan0:  mtu 1500 qdisc mq state UP qlen 1000
-      link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
-      inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
-      inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
-      valid_lft forever preferred_lft forever
-      ```
-NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
+     you can found the connect is ok now.  
+     `$ ip addr show wlan0`  
+     ```bash
+     wlan0:  mtu 1500 qdisc mq state UP qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
+     inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
+     inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
+     valid_lft forever preferred_lft forever
+     ```
+   NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
 
 ## <a name="3">Fedora && CentOS wifi configure</a>
 
