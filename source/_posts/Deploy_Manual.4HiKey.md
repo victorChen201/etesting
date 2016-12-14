@@ -50,12 +50,14 @@ NOTE: please refer to the Hardware User Guide for more information on board link
    $ sudo apt-get update
    $ sudo apt-get install android-tools-fastboot
    ```
+
 4. Install Python, you can do it as follows:  
    ```bash
    $ sudo apt-get update
    $ sudo apt-get install python2.7 python2.7-dev
    $ alias python=python2.7
-	```
+   ```
+
 ### <a name="2.3">Image File</a>
 ```bash
 $ mkdir hikey-image
@@ -121,7 +123,7 @@ $ rm -rf boot-fat
 ```
 NOTE: More detail information about how to write this grub.cfg, please refer to [GRUB_Manual.md](https://github.com/open-estuary/estuary/blob/master/doc/Grub_Manual.4All.md) document.
 
-If you finish making boot-fat.uefi.img image, you start to flash this image according to this instruction:
+If you finish making boot-fat.uefi.img image, you start to flash this image according to this instruction:  
 1. Turn off HiKey board  
 2. Connect debug UART3 on HiKey to PC (used to monitor debug status)  
 3. Make sure pin1-pin2 and pin5-pin6 on J601 are linked (recovery mode)  
@@ -146,28 +148,29 @@ You should partion SD card (8G) and tar this Ubuntu_ARM64.tar.gz into your SD ca
    (parted) q
    $ sudo mkfs.ext4 -L "ubuntu" /dev/sdx1
    ```
- 3. Remove and insert SD card in your PC  
- 4. Tar Ubuntu_ARM64.tar.gz into your SD card  
-    ```bash
-    $ cd hikey-image	
-    $ tar -xvzf Ubuntu_ARM64.tar.gz -C /media/{admin}/ubuntu
-    ```
- 5. Insert SD card into HiKey board  
- 6. Turn on HiKey board  
- 7. Select "grub on eMMC" from uefi options  
- 8. Select "Hikey Ubuntu SD card" from grub options  
- 9. Success to boot ubunt system  
+3. Remove and insert SD card in your PC  
+4. Tar Ubuntu_ARM64.tar.gz into your SD card  
+   ```bash
+   $ cd hikey-image	
+   $ tar -xvzf Ubuntu_ARM64.tar.gz -C /media/{admin}/ubuntu
+   ```
+5. Insert SD card into HiKey board  
+6. Turn on HiKey board  
+7. Select "grub on eMMC" from uefi options  
+8. Select "Hikey Ubuntu SD card" from grub options  
+9. Success to boot ubunt system  
 NOTE: WIFI config about mini-rootfs systerm please refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document
 
 #### <a name="3.3.2">eMMC on HiKey placing this ubuntu systerm</a> 
 
 If you purchase HiKey board which eMMC is 8G, We recommend you to use eMMC HiKey placing this ubuntu systerm. Estuary provides ptable image which will suport 8G eMMC HiKey board.In return you purchase HiKey board which eMMC is 4G, We recommend you to use SD card placing this ubuntu syterm because Estuary release distribution volume is 4G~5G or so. However, you also may use HiKey board which eMMC is 4G to place this clipping ubuntu systerm.  
 You can place this ubuntu systerm into eMMC on HiKey according to this following instruction:  
-1. Turn on HiKey board
-2. Select "grub on eMMC" from uefi options
-3. Select "Hikey minilinux eMMC" from grub options (boot min rootfs)
-4. Refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document to config WIFI link
-5. Download this ubuntu systerm into eMMC on HiKey board
+
+1. Turn on HiKey board  
+2. Select "grub on eMMC" from uefi options  
+3. Select "Hikey minilinux eMMC" from grub options (boot min rootfs)  
+4. Refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document to config WIFI link  
+5. Download this ubuntu systerm into eMMC on HiKey board  
    ```bash
    $ mount /dev/mmcblk0p9 /tmp
    $ cd /tmp
@@ -176,10 +179,12 @@ You can place this ubuntu systerm into eMMC on HiKey according to this following
    $ cd /
    $ mount /tmp
    ```
- 6. Reboot HiKey board  
- 7. Select "grub on eMMC" from uefi options.  
- 8. Select "Hikey Ubuntu eMMC" from grub options  
- 9. Success to boot ubunt systerm  
+
+6. Reboot HiKey board  
+7. Select "grub on eMMC" from uefi options.  
+8. Select "Hikey Ubuntu eMMC" from grub options  
+9. Success to boot ubunt systerm  
+
 NOTE: WIFI config about ubuntu systerm please refer to [Setup_HiKey_Wifi_Env.md](https://github.com/open-estuary/estuary/blob/master/doc/Setup_HiKey_WiFi_Env.4HiKey.md) document
 
 ### <a name="4">Appendix 1: Partition Information</a>

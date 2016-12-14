@@ -29,11 +29,11 @@ Where to get them, please refer to [Readme.md](https://github.com/open-estuary/e
 Note: This is not necessary unless you want to upgrade UEFI really.
 
 1. Prepare files about UEFI on local computer  
-   FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.  
-   All files mentioned above should be ready firstly, then put them in the root directory of FTP.
+FTP protocol is used for downloading between hardware boards and local network. Aboveall, please make sure you have a working FTP server in local network, so that board can get needed files from network by FTP.  
+All files mentioned above should be ready firstly, then put them in the root directory of FTP.
 
 2. Connect the board's UART port to a host machine  
-   Please refer to [Deploy_Manual.4D02.md](https://github.com/open-estuary/estuary/blob/master/doc/Deploy_Manual.4D02.md) "Prerequisite" chapter.
+Please refer to [Deploy_Manual.4D02.md](https://github.com/open-estuary/estuary/blob/master/doc/Deploy_Manual.4D02.md) "Prerequisite" chapter.
 
 If you choose Method 1, use another console window, use `board_reboot` command to reset the board.  
 If you choose Method 2, press the reset key on the board to reset the board.
@@ -68,34 +68,35 @@ When system showing "Press Any key in 10 seconds to stop automatical booting..."
    Press any key except "enter" key to enter into UEFI main menu. Select "Boot Manager"->EFI Internal Shell.
 
    `ifconfig -s eth0 static <IP address> <mask> <gateway>`  
-   e.g.: `ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1`  
+   e.g.: `ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1`
+
 * Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
-   Enter "exit" from "EFI Internet Shell" mode to UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.  
-   ```bash
-   # Download file from FTP server to board's RAM
-   provision <server IP> -u <ftp user name> -p <ftp password> -f <UEFI binary> -a <download target address>
-   # Write the data into NORFLASH
-   spiwfmem <source address> <target address> <data length>
-   ```
-   e.g.:  
-   ```bash
-    provision 192.168.1.107 -u sch -p aaa -f UEFI_D02.fd -a 0x100000
-    spiwfmem 0x100000 0x0000000 0x300000
-   ```
+  Enter "exit" from "EFI Internet Shell" mode to UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.  
+  ```bash
+  # Download file from FTP server to board's RAM
+  provision <server IP> -u <ftp user name> -p <ftp password> -f <UEFI binary> -a <download target address>
+  # Write the data into NORFLASH
+  spiwfmem <source address> <target address> <data length>
+  ```
+  e.g.:  
+  ```bash
+  provision 192.168.1.107 -u sch -p aaa -f UEFI_D02.fd -a 0x100000
+  spiwfmem 0x100000 0x0000000 0x300000
+  ```
 * Burn CPLD file  
-   Notes: This is a very dangerous operation, please don't do it when not necessary.  
-   If you really want to do it, please make sure the power can **NOT** be shut off suddenly during updating CPLD.  
-   ```bash
-   # Download file from FTP server to board's RAM
-   provision <server IP> -u <ftp user name> -p <ftp password> -f <cpld bin> -a <target address>
-   # Write the data into NORFLASH
-   updatecpld <target address>
-   ```
-   e.g.:  
-   ```bash
-   provision 192.168.1.107 -u sch -p aaa -f CH02TEVBC_V03.bin -a 0x100000
-   updatecpld 0x100000
-   ```
+  Notes: This is a very dangerous operation, please don't do it when not necessary.  
+  If you really want to do it, please make sure the power can **NOT** be shut off suddenly during updating CPLD.  
+  ```bash
+  # Download file from FTP server to board's RAM
+  provision <server IP> -u <ftp user name> -p <ftp password> -f <cpld bin> -a <target address>
+  # Write the data into NORFLASH
+  updatecpld <target address>
+  ```
+  e.g.:  
+  ```bash
+  provision 192.168.1.107 -u sch -p aaa -f CH02TEVBC_V03.bin -a 0x100000
+  updatecpld 0x100000
+  ```
 *  Power off and reboot board again
 
 ## <a name="3">Recover the UEFI when it broke</a>

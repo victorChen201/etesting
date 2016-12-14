@@ -62,7 +62,7 @@ Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09
 hi6220-hikey.dtb in `<project root>/workspace/binary/HiKey/hi6220-hikey.dtb`  
 **source**: `<project root>/kernel`  
 
-build commands(supposedly, you are in `<project root>` currently:  
+build commands(supposedly, you are in `<project root>` currently):  
 `./estuary/submodules/build-kernel.sh --platform=HiKey --output=workspace`, if your host is not arm architecture, please execute `./estuary/submodules/build-kernel.sh --platform=HiKey --output=workspace --cross=aarch64-linux-gnu-`.
 
 Note: more details about how to install gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux, please refer to https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md.

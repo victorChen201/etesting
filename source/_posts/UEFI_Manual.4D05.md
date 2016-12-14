@@ -67,8 +67,9 @@ You can switch between two modes by typing "exit" from one mode to UEFI main men
 
 ### Update UEFI files
 
-a. IP address config at "EFI Internal Shell" mode(Optional, you can ignore this step if DHCP works well)  
+*  IP address config at "EFI Internal Shell" mode(Optional, you can ignore this step if DHCP works well)  
    Press any key except "enter" key to enter UEFI main menu. Select "Boot Manager"->"EFI Internal Shell".
+
    ```bash
    ifconfig -s eth0 static <IP address> <mask> <gateway>
    ```
@@ -76,8 +77,10 @@ a. IP address config at "EFI Internal Shell" mode(Optional, you can ignore this 
    ```bash
    ifconfig -s eth0 static 192.168.1.4 255.255.255.0 192.168.1.1
    ```
-b. Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
+
+*  Burn BIOS file at "Embedded Boot Loader(EBL)" mode  
    Enter "exit" from "EFI Internal Shell" mode to the UEFI main menu and choose "Boot Manager"-> "Embedded Boot Loader(EBL)"after setting the IP address done.
+
    ```bash
    # Download file from FTP server to board's RAM
    provision <server IP> -u <ftp user name> -p <ftp password> -f <UEFI binary> -a <download target address>
@@ -89,7 +92,8 @@ b. Burn BIOS file at "Embedded Boot Loader(EBL)" mode
    provision 192.168.1.107 -u sch -p aaa -f UEFI_D05.fd -a 0x100000
    spiwfmem 0x100000 0x0000000 0x300000
    ```
-c. Power off and reboot board again.
+
+*  Power off and reboot board again.
 
 ## <a name="3">Recover the UEFI when it broke</a>
 

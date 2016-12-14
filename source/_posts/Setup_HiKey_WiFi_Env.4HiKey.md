@@ -60,19 +60,20 @@ NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" webs
 ## <a name="2">Config WiFi On Ubuntu & Debian systerm</a>
 
 On serial console, you should see some debug message which can show if the Hikey board have booted into ubuntu systerm successfully. You can config this WiFi according to this follow instruction:  
-Supposed the login user is peter.  
+Supposed the login user is peter.
+
 1. Find out the wireless device name ##  
    `$ iw dev`
    ```bash
-     phy#0
-     Interface wlan0
-     ifindex 3
-     type managed
+   phy#0
+   Interface wlan0
+   ifindex 3
+   type managed
    ```
    The above output shows that the system has 1 physical WiFi card, designated as phy#0.
    The device name is wlan0. The type specifies the operation mode of the wireless device.
    managed means the device is a WiFi station or client that connects to an access point.
-	
+
 2. configure the wifi data for the wifi device you selected
    ```bash
    cd /etc/wpa_supplicant
@@ -85,7 +86,7 @@ Supposed the login user is peter.
    To be more security, you can remove the '#psk=xxxx' from the wpa_supplicant.conf;  
    If your AP is hidden SSID, add this option just following the configure line of 'ssid="???"' :
    scan_ssid=1
-   
+
 3. configure the wifi interface
 
    You must configure a corresponding wifi interface to make wifi enabled during the booting.
@@ -112,42 +113,47 @@ Supposed the login user is peter.
 4. reboot the system adn verify the wifi status
 
    At first, please reboot the system.  
-   After the system is ready, you can check whether the wifi is ready:  
-   a. Check whether the wireless device is up.
-   `$ ip link show wlan0`  
-   ```bash
-   3: wlan0: (BROADCAST,MULTICAST) mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
-   link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff`
-   ```
-   Look for the word "UP" inside the brackets in the first line of the output.  
-   b. enable the wireless device  
-   In the above example, wlan0 is not UP. Execute the following command to bring it up:  
-   `$ sudo ip link set wlan0 up`  
-   `[sudo] password for peter`:
-   Note: you need root privilege for the above operation.
+   After the system is ready, you can check whether the wifi is ready:
 
-   If you run the show link command again, you can tell that wlan0 is now UP.  
-   `$ ip link show wlan0`  
-   ```bash
-    wlan0: (NO-CARRIER,BROADCAST,MULTICAST,UP) mtu 1500 qdisc mq state DOWN mode DEFAULT<br>
-    qlen 1000<br>
-    link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
-   ```
-   c. Check the connection status.  
-   `$ iw wlan0 link`  
-   you can found the connect is ok now.  
-   `$ ip addr show wlan0`  
-   ```bash
-    wlan0:  mtu 1500 qdisc mq state UP qlen 1000
-    link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
-    inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
-    valid_lft forever preferred_lft forever
-   ```
-    NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
+   * Check whether the wireless device is up.  
+     `$ ip link show wlan0`  
+     ```bash
+     3: wlan0: (BROADCAST,MULTICAST) mtu 1500 qdisc noop state DOWN mode DEFAULT qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff`
+     ```
+     Look for the word "UP" inside the brackets in the first line of the output.
+
+   * Enable the wireless device  
+     In the above example, wlan0 is not UP. Execute the following command to bring it up:  
+     `$ sudo ip link set wlan0 up`  
+     `[sudo] password for peter`:  
+     Note: you need root privilege for the above operation.
+
+     If you run the show link command again, you can tell that wlan0 is now UP.  
+     `$ ip link show wlan0`  
+     ```bash
+     wlan0: (NO-CARRIER,BROADCAST,MULTICAST,UP) mtu 1500 qdisc mq state DOWN mode DEFAULT
+     qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
+     ```
+
+   * Check the connection status.  
+     `$ iw wlan0 link`  
+     you can found the connect is ok now.  
+     `$ ip addr show wlan0`  
+     ```bash
+     wlan0:  mtu 1500 qdisc mq state UP qlen 1000
+     link/ether 74:e5:43:a1:ce:65 brd ff:ff:ff:ff:ff:ff
+     inet 192.168.1.113/24 brd 192.168.1.255 scope global wlan0
+     inet6 fe80::76e5:43ff:fea1:ce65/64 scope link
+     valid_lft forever preferred_lft forever
+     ```
+   NOTE: In order to test this WiFi function, you can use "ping www.baidu.com" website to verify it.
+
 ## <a name="3">Fedora && CentOS wifi configure</a>
 
- Please run 'iw dev' to collect the wifi device information as the first step. You at least need to know what is the device name of your wifi.  
+ Please run 'iw dev' to collect the wifi device information as the first step. You at least need to know what is the device name of your wifi.
+
 1. configure the wpa_supplicant environment
    ```bash
    cd /etc/sysconfig
@@ -180,6 +186,7 @@ Supposed the login user is peter.
    `ip addr show wlan0`  
 
    When the above are ok, you can do some pings to external website.
+
 ## <a name="4">OpenSuse Wifi configure</a>
 
 1. modify the wifi connection file (such as ifcfg-xxx)

@@ -21,7 +21,7 @@ After you do `./estuary/build.sh -p QEMU -d Ubuntu`, all targets files will be p
 **source**: `<project root>/kernel`  
 **Note**: Before compiling kernel, gcc-linaro-aarch64-linux-gnu-4.9-2014.09_linux(https://github.com/open-estuary/estuary/blob/master/doc/Toolchains_Guide.4All.md) and libssl-dev should be installed first.
 
-build commands(supposedly, you are in `<project root>`currently:
+build commands(supposedly, you are in `<project root>`currently):
 ```bash
 build_dir=build
 KERNEL_DIR=kernel
@@ -62,7 +62,7 @@ make O=../$kernel_dir ${DTB_BIN#*/boot/dts/}
 **descriptions**: qemu-system-aarch64 is the QEMU executable program.  
 **target**: `<project root>/build/qemu/bin/qemu-system-aarch64`  
 **source**: `<project root>/qemu`  
-build commands(supposedly, you are in <project root> currently:
+build commands(supposedly, you are in <project root> currently):
 ```bash
 sudo apt-get install -y gcc zlib1g-dev libperl-dev libgtk2.0-dev libfdt-dev
 
