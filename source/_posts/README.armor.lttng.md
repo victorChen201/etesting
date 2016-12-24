@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [LTTNG](#1)
 * [Ubuntu](#2)

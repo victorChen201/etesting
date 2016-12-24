@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Config WiFi On mini-rootfs systerm](#1)
 * [Config WiFi On Ubuntu & Debian systerm](#2)

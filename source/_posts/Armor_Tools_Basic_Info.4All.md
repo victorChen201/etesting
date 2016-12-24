@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Introduction](#1)
 * [List of Tools](#2)

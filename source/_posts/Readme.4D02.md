@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - D02
 ---
 This is the readme file for D02 platform
 

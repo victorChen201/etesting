@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 How to verify iptables tool
 

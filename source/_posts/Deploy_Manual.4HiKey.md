@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - HiKey
 ---
 * [Introduction](#1)
 * [Preparation](#2)

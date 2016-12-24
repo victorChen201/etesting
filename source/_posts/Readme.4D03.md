@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - D03
 ---
 
 This is the readme file for D03 platform

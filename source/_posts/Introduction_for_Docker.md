@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 What is Docker?
 

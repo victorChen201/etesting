@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - D02
 ---
 * [Introduction](#1)
 * [Upgrade UEFI](#2)

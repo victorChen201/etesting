@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Readme for KGDB and KDB Tools](#1)
 * [Debugging using KGDB](#2)

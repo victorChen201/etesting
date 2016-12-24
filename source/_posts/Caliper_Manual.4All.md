@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [What is Caliper?](#1)
 * [Caliper Organization](#2)

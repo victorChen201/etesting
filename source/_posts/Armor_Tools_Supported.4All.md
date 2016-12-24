@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - ALL
 ---
 * [Introduction](#1)
 * [List of supported Tools in Armor](#2)

@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - HiKey
 ---
 This is the readme file for HiKey platform
 

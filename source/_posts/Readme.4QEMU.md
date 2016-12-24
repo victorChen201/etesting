@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - QEMU
 ---
 This is the readme file for QEMU platform
 

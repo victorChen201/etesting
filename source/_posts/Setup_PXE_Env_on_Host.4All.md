@@ -6,7 +6,6 @@ tags:
 categories:
   - Estuary
   - Documents
-  - All
 ---
 * [Introduction](#1)
 * [Setup DHCP server on Ubuntu](#2)
