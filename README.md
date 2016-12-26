@@ -9,6 +9,7 @@ sudo npm install -g hexo-cli
 
 ```bash
 git clone https://github.com/jarsonfang/etesting.git
+cd etesting && git submodule init && git submodule update
 ```
 
 ## Install node_modules
