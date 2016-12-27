@@ -1,5 +1,5 @@
 ---
-title: Armor_Manual.4ALL.md
+title: Deploy_Manual.4D02
 date: 2016-10-13 10:07:01
 tags:
   - D02

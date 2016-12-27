@@ -1,8 +1,10 @@
 ---
-title: README.armor.lttng.md
+title: README.armor.lttng
 date: 2016-10-10 10:10:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents

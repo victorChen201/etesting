@@ -1,8 +1,10 @@
 ---
-title: Armor_Tools_Basic_Info.4All.md
+title: Armor_Tools_Basic_Info.4All
 date: 2016-10-09 10:07:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents

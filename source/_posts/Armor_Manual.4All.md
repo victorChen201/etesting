@@ -1,8 +1,10 @@
 ---
-title: Armor_Manual.4ALL.md
+title: Armor_Manual.4ALL
 date: 2016-10-13 10:07:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents
