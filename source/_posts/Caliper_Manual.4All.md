@@ -1,8 +1,10 @@
 ---
-title: Caliper_Manual.4All.md
+title: Caliper_Manual.4All
 date: 2016-10-09 10:07:01
 tags:
-  - All
+  - D02
+  - D03
+  - D05
 categories:
   - Estuary
   - Documents

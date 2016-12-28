@@ -1,5 +1,5 @@
 ---
-title: Deploy_Manual.4D05.md
+title: Deploy_Manual.4D05
 date: 2016-12-24
 tags:
   - D05

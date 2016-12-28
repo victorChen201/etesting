@@ -1,5 +1,5 @@
 ---
-title: UEFI_Manual.4D02.md
+title: UEFI_Manual.4D02
 date: 2016-10-10 10:10:01
 tags:
   - D02

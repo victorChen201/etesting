@@ -1,5 +1,5 @@
 ---
-title: Deploy_Manual.4D03.md
+title: Deploy_Manual.4D03
 date: 2016-12-24
 tags:
   - D03
