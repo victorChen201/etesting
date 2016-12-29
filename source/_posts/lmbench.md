@@ -13,9 +13,9 @@ categories:
 ### lmbench
 
 Denpendency:
-	yum install numactl
+*	yum install numactl
 Source code:
-	Openlab:192.168.1.101:/home/chenzhihui/Ali-test/lmbench-30-a9
+*	Openlab:192.168.1.101:/home/chenzhihui/Ali-test/lmbench-30-a9
 Build:
 ```bash
 cd lmbench-3.0-a9
