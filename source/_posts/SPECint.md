@@ -2,11 +2,11 @@
 title: SPECint
 date: 2016-12-29 10:38:05
 tags:
-	-D05
-	-CentOS
+	- D05
+	- CentOS
 categories:
-	-estuary
-	-document
+	- Estuary
+	- Documents
 ---
 
 **Dependency:**

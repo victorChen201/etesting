@@ -2,11 +2,11 @@
 title: Lmbench-latency
 date: 2016-12-28 16:22:52
 tags:
-	-D05
-	-CentOS
+	- D05
+	- CentOS
 categories:
-	-estuary
-	-document
+	- Estuary
+	- Documents
 ---
 **Dependency:**
 *	yum install numactl
