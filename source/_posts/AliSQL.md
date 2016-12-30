@@ -1,6 +1,6 @@
 ---
-title: Hibench
-date: 2016-12-30 09:46:32
+title: AliSQL
+date: 2016-12-30 10:10:56
 tags:
 	- D05
 	- CentOS
@@ -9,32 +9,30 @@ categories:
 	- Documents
 ---
 **Server side:**
-- *Download scripts:*
+- Download scripts:
   ```bash
   git clone https://github.com/sjtuhjh/applications
-  cd applications/apps/hadoop/hadoop_test1/
+  cd applications/apps/mysql/alisql_1
   ```
-
-- *Init:* 	
-  ```
+- Init:
+  ```bash
   ./setup.sh server
   ```
-
-- *Run:*
-  ```
+- Run:
+  ```bash
   ./run_server.sh
   ```
-**Client side:**
-- *Download scripts:*
+**Client side**
+- Download scripts:
   ```bash
   git clone https://github.com/sjtuhjh/applications
-  cd applications/apps/hadoop/hadoop_test1/
+  cd applications/apps/mysql/alisql_1
   ```
-- *Init:*
+- Init:
   ```
   ./setup.sh client
   ```
-- *Run:*
+- Run:
   ```
-  ./run_test_all.sh
+  ./run_test.sh
   ```

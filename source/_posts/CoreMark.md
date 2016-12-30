@@ -8,11 +8,11 @@ categories:
 	- Estuary
 	- Documents
 ---
-**Source code:**
-* Openlab:192.168.1.101:/home/chenzhihui/All-test/coremark/coremark_v1.0.tgz
+- **Source code:**
+  *Openlab:192.168.1.101:/home/chenzhihui/All-test/coremark/coremark_v1.0.tgz*
 
-**Test:**
-```
-cd coremark_v1.0
-make
-```
+- **Test:**
+  ```bash
+  cd coremark_v1.0
+  make
+  ```
