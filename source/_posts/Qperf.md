@@ -17,8 +17,8 @@ categories:
 	```bash
 	ifconfig eth2 <server ip>
 	ethtool -C eth2 rx-usecs 30 rx-frames 30 tx-usecs 30 tx-frames 30
-	server iptables stop
-	server network-manager stop
+	service iptables stop
+	service network-manager stop
 	```
 - Run:
 	```bash
@@ -33,8 +33,8 @@ categories:
 	```bash
 	ifconfig eth2 <client ip>
 	ethtool -C eth2 rx-usecs 30 rx-frames 30 tx-usecs 30 tx-frames 30
-	server iptables stop
-	server network-manager stop
+	service iptables stop
+	service network-manager stop
 	```
 - Run:
 	```bash
