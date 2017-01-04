@@ -10,10 +10,10 @@ categories:
 ---
 
 - **Denpendency:**
-  ```
+  ```bash
   yum install numactl
-  ```  
-- **Source code:**
+  ```
+- **Source code:**  
   *Openlab:192.168.1.101:/home/chenzhihui/Ali-test/lmbench-3.0-a9/*
 - **Build:**
   ```bash
