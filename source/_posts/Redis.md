@@ -6,7 +6,7 @@ tags:
 	- CentOS
 categories:
 	- Estuary
-	- Document
+	- Documents
 ---
 **Server side:**
 - Download scripts:
