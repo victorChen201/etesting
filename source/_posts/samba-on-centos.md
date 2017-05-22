@@ -6,7 +6,7 @@ tags:
   - Centos
 categories:
   - Estuary
-  - Server
+  - Documents
 ---
 
 ## Installation

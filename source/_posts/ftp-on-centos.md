@@ -6,7 +6,7 @@ tags:
   - Centos
 categories:
   - Estuary
-  - Server
+  - Documents
 ---
 
 In this article, we will learn how to configure FTP server on CentOs 7 using `vsftpd`. `vsftpd` (Very Secure File Transport Protocol Daemon) is a secure and very fast FTP server on Linux systems.
